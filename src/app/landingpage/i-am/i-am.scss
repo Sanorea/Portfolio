@@ -1,0 +1,197 @@
+.img {
+    position: relative;
+    width: 100%;
+}
+
+.start-img {
+    height: 600px;
+    left: 50px;
+    top: 50px;
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+
+}
+
+.photo-shadows {
+    width: 700px;
+    opacity: 1;
+    position: absolute;
+    left: 0px;
+    top: 100px;
+    z-index: 0;
+
+}
+
+.i-am-wrapper {
+    width: 100%;
+}
+
+.hero-bg {
+    width: 100%;
+    max-width: 1440px;
+    height: 500px;
+    top: 400px;
+    left: 0px;
+    opacity: 1;
+    z-index: 2;
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
+    /*     object-fit: cover; */
+}
+
+.i-am-textfield {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* oder center, wie du willst */
+    justify-content: flex-start;
+
+    width: fit-content; // ⬅️ Das ist wichtig
+    left: 430px;
+    bottom: 400px;
+    z-index: 5;
+}
+
+
+.i-am-text-rotate-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    width: 152px;
+    height: 63px;
+}
+
+
+.i-am-text-rotate {
+    transform: rotate(-90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    width: 152px;
+    height: 63px;
+    opacity: 1;
+    margin: 0px;
+
+}
+
+.i-am-text-name {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 90px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-size: clamp(32px, 4vw, 70px); // optional für responsive Schriftgröße
+    line-height: 120%;
+    margin: 0;
+    white-space: normal; // ⬅️ Umbruch erlaubt
+    word-break: break-word; // lange Wörter umbrechen
+    width: auto; // ⬅️ wichtig! Kein 100%
+    max-width: 100%; // optional, falls Container zu schmal wird
+
+}
+
+.i-am-text-profession {
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 120%;
+    color: #9747FF;
+    font-size: clamp(32px, 4vw, 70px); // optional für responsive Schriftgröße
+    line-height: 120%;
+    margin: 0;
+    white-space: normal; // ⬅️ Umbruch erlaubt
+    word-break: break-word; // lange Wörter umbrechen
+    width: auto; // ⬅️ wichtig! Kein 100%
+    max-width: 100%; // optional, falls Container zu schmal wird
+}
+
+.i-am-text {
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.i-am-text-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; // ⬅️ erlaubt Zeilenumbruch bei Platzmangel
+    justify-content: center;
+    align-items: center;
+}
+
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.green-button {
+    margin-top: 16px;
+    width: 107;
+    height: 58;
+    opacity: 1;
+    gap: 10px;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    color: white;
+    background-color: #70E61C;
+    font-size: 32px;
+    z-index: 4;
+    transition: transform 0.3s ease;
+    display: inline-block;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2); // 1.2 = 120 % der Originalgröße
+    }
+
+}
+
+.online-contact-container {
+    position: absolute;
+    top: 837px;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    /*     left: 0; */
+
+    p {
+        font-size: 23px;
+    }
+}
+
+.vektor-object-purple {
+    width: 100px;
+    height: 1px;
+    border: #9747FF;
+    background-color: #9747FF;
+
+}
+
+.sozial-media-container {
+    display: flex;
+    gap: 32px;
+
+    img {
+        transition: transform 0.3s ease;
+        display: inline-block;
+
+        &:hover {
+            transform: scale(1.2); // 1.2 = 120 % der Originalgröße
+            cursor: pointer;
+        }
+    }
+
+}
