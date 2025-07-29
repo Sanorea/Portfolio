@@ -1,0 +1,88 @@
+h3 {
+    font-weight: 700;
+
+    font-style: Bold;
+    font-size: 90px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-size: clamp(32px, 4vw, 70px); // optional für responsive Schriftgröße
+    line-height: 120%;
+    margin: 0;
+    white-space: normal; // ⬅️ Umbruch erlaubt
+    word-break: break-word; // lange Wörter umbrechen
+    width: auto; // ⬅️ wichtig! Kein 100%
+    max-width: 100%; // optional, falls Container zu schmal wird
+    margin-top: 50px;
+}
+
+.about-me-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 164px;
+    z-index: 5;
+}
+
+.about-me-text-field {
+    width: 60%;
+    margin-left: 16px;
+}
+
+.bg-shadow {
+    width: 774px;
+    opacity: 1;
+    position: absolute;
+    left: 431px;
+    top: -40px;
+    z-index: 0;
+}
+
+.profile-img {
+    width: 453px;
+    height: 453px;
+    object-fit: cover;
+    border-radius: 180px;
+    border: 4px solid #70E61C;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.informations-about-me {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 16px;
+
+    img {
+        height: 48px;
+        width: 48px;
+    }
+
+
+}
+
+.about-me-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.vektor-object-green {
+    width: 100%;
+    height: 4px;
+    border: #70E61C;
+    background-color: #70E61C;
+    z-index: 1;
+}
+
+.img-and-vektor-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    top: 80px;
+}
