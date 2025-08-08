@@ -1,0 +1,27 @@
+h3 {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 90px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-size: clamp(32px, 4vw, 70px); // optional für responsive Schriftgröße
+    line-height: 120%;
+    margin: 0;
+    white-space: normal; // ⬅️ Umbruch erlaubt
+    word-break: break-word; // lange Wörter umbrechen
+    width: auto; // ⬅️ wichtig! Kein 100%
+    max-width: 100%; // optional, falls Container zu schmal wird
+    margin-top: 50px;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 100px;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+}
+

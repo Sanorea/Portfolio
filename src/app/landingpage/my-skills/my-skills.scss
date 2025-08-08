@@ -1,0 +1,117 @@
+h3 {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 90px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-size: clamp(32px, 4vw, 70px); // optional für responsive Schriftgröße
+    line-height: 120%;
+    margin: 0;
+    white-space: normal; // ⬅️ Umbruch erlaubt
+    word-break: break-word; // lange Wörter umbrechen
+    width: auto; // ⬅️ wichtig! Kein 100%
+    max-width: 100%; // optional, falls Container zu schmal wird
+    margin-top: 50px;
+}
+
+.skills-container {
+    width: 664px;
+    height: 404px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 88px;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+    p {
+        text-align: center;
+    }
+
+
+}
+
+.skill-icon {
+    &:hover {
+        animation: hop 0.4s ease;
+    }
+}
+
+@keyframes hop {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-10px);
+    }
+
+    90% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 105px;
+    margin-right: 100px;
+    width: 471px;
+
+    p {
+        text-align: right;
+    }
+}
+
+.highlight {
+    color: #9747FF;
+}
+
+.skill-container.highlight:hover {
+    color: white;
+    /* beliebige Hover-Farbe */
+    transition: color 0.1s ease;
+}
+
+
+.fontsize-32px {
+    font-size: 32px;
+    font-weight: 700;
+    font-style: Bold;
+}
+
+.green-button {
+    margin-top: 16px;
+    width: 107;
+    height: 58;
+    opacity: 1;
+    gap: 10px;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    color: white;
+    background-color: #70E61C;
+    font-size: 32px;
+    z-index: 4;
+    transition: transform 0.3s ease;
+    display: inline-block;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2); // 1.2 = 120 % der Originalgröße
+    }
+
+}

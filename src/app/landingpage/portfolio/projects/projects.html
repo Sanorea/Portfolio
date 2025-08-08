@@ -1,0 +1,12 @@
+<div class="project" [ngClass]="{ 'flipped': flipped }">
+  <img [src]="'assets/img/' + title + '.png'" alt="{{title}}">
+  <div class="project-info">
+    <p class="title-container">{{title}}</p>
+    <p class="skills-container">{{skills}}</p>
+    <p class="description-container">{{description}}</p>
+    <div class="button-container">
+      <button class="live-test-button">Live test</button>
+      <button class="github-button">Github</button>
+    </div>
+  </div>
+</div>

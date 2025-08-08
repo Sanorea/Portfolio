@@ -1,0 +1,103 @@
+.project {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 80px;
+
+    &.flipped {
+        flex-direction: row-reverse;
+        text-align: right;
+
+        .project-info {
+            align-items: flex-end;
+        }
+    }
+
+    img {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .project-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.title-container {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #9747FF;
+    margin-bottom: 15px;
+}
+
+.skills-container {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #70E61C;
+    margin-block: 0px;
+}
+
+.button-container {
+    display: flex;
+
+    gap: 86px;
+}
+
+.live-test-button {
+    margin-top: 16px;
+    width: 107;
+    height: 58;
+    opacity: 1;
+    gap: 10px;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    color: white;
+    background-color: #9747FF;
+    font-size: 32px;
+    z-index: 4;
+    display: inline-block;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #70E61C;
+    }
+
+}
+
+.github-button {
+    margin-top: 16px;
+    width: 107;
+    height: 58;
+    opacity: 1;
+    gap: 10px;
+    border-radius: 10px;
+    border-color: #70E61C;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    color: white;
+    background-color: #141D2F;
+    font-size: 32px;
+    z-index: 4;
+    display: inline-block;
+
+    &:hover {
+        cursor: pointer;
+
+        background-color: #70E61C;
+    }
+
+}
