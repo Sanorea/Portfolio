@@ -16,10 +16,9 @@ h3 {
 
 .skills-container {
     width: 664px;
-    height: 404px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 88px;
+    gap: 40px 88px;
 }
 
 .skill-container {

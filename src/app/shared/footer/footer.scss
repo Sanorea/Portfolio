@@ -13,16 +13,20 @@
 
 .footer-left {
     margin-left: 100px;
-    gap: 0px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
 
     img {
         margin-bottom: -20px;
     }
 
-    p {
+    a {
         margin-left: 12px;
         margin-block: 0px;
         font-size: 16px;
+        text-decoration: none;
+        color: white;
     }
 }
 

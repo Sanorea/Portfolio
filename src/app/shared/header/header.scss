@@ -16,10 +16,21 @@
 }
 
 .menu-section-container {
-    display: flex;
-    gap: 29px;
-    font-size: 32px;
+  display: flex;
+  gap: 29px;
+  font-size: 32px;
+
+  a {
+    /* Hier deine Styles für alle <a> Links im Container */
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: #70E61C;
+    }
+  }
 }
+
 
 .language-container {
     display: flex;

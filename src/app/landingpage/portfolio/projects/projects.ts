@@ -13,5 +13,7 @@ export class Projects {
 @Input() skills!: string;
 @Input() description!: string;
 @Input() flipped: boolean = false;
+@Input() live!: string;
+@Input() git!: string;
 
 }

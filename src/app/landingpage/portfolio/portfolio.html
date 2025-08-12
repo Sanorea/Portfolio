@@ -9,10 +9,12 @@
     </div>
     <div class="project-container">
         <app-projects *ngFor="let project of projects; let i = index" 
-        [title]="project.title" 
-        [skills]="project.skills"
-        [description]="project.description" 
-        [flipped]="i % 2 !== 0">
+            [title]="project.title" 
+            [skills]="project.skills"
+            [description]="project.description" 
+            [live]="project.live"
+            [git]="project.git"
+                        [flipped]="i % 2 !== 0" >
         </app-projects>
     </div>
 

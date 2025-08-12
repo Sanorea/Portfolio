@@ -1,12 +1,17 @@
 <div class="project" [ngClass]="{ 'flipped': flipped }">
-  <img [src]="'assets/img/' + title + '.png'" alt="{{title}}">
+  <img [src]="'./img/projects/' + title + '.png'" alt="{{title}}">
   <div class="project-info">
     <p class="title-container">{{title}}</p>
     <p class="skills-container">{{skills}}</p>
     <p class="description-container">{{description}}</p>
     <div class="button-container">
-      <button class="live-test-button">Live test</button>
-      <button class="github-button">Github</button>
+      <div class="button-container">
+        <a class="live-test-button" href="http://{{live}}.isabel-egli.ch/" target="_blank" rel="noopener noreferrer">Live
+          test</a>
+        <a class="github-button" href="https://github.com/Sanorea/{{git}}" target="_blank"
+          rel="noopener noreferrer">Github</a>
+      </div>
+
     </div>
   </div>
 </div>
