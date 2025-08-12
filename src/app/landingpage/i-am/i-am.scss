@@ -1,3 +1,5 @@
+@import './../../../styles.scss';
+
 .img {
     position: relative;
     width: 100%;
@@ -11,7 +13,6 @@
     position: absolute;
     z-index: 1;
     display: flex;
-
 }
 
 .photo-shadows {
@@ -26,6 +27,7 @@
 
 .i-am-wrapper {
     width: 100%;
+    margin-top: 110px;
 }
 
 .hero-bg {
@@ -100,7 +102,7 @@
     font-weight: 400;
     font-size: 58px;
     line-height: 120%;
-    color: #9747FF;
+    color: $purple-color;
     font-size: clamp(32px, 4vw, 70px); // optional für responsive Schriftgröße
     line-height: 120%;
     margin: 0;
@@ -144,7 +146,7 @@
     padding-bottom: 15px;
     padding-left: 30px;
     color: white;
-    background-color: #70E61C;
+    background-color: $green-color;
     font-size: 32px;
     z-index: 4;
     transition: transform 0.3s ease;
@@ -175,8 +177,8 @@
 .vektor-object-purple {
     width: 100px;
     height: 4px;
-    border: #9747FF;
-    background-color: #9747FF;
+    border: $purple-color;
+    background-color: $purple-color;
 
 }
 

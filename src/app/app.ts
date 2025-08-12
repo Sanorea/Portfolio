@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { Header } from "./shared/header/header";
-import { Footer } from './shared/footer/footer';
+import { Header } from "./landingpage/header/header";
+import { Footer } from './landingpage/footer/footer';
 import { AboutMe } from './landingpage/about-me/about-me';
 import { MySkills } from './landingpage/my-skills/my-skills';
 import { Portfolio } from './landingpage/portfolio/portfolio';

@@ -1,16 +1,19 @@
+@import './../../../styles.scss';
+
+
 input[type=text],
 [type=email],
 select,
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #9747FF;
+    border: 1px solid $purple-color;
     border-radius: 10px;
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-    background-color: #141D2F;
+    background-color: $bg-color;
     color: white;
 
     &::placeholder {
@@ -21,7 +24,7 @@ textarea {
 
 
 input[type=submit] {
-    background-color: #9747FF;
+    background-color: $purple-color;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -64,7 +67,7 @@ h3 {
 .purple-vektor {
     height: 4px;
     width: 50%;
-    background-color: #9747FF;
+    background-color: $purple-color;
 }
 
 .other-vektor {
@@ -72,7 +75,7 @@ h3 {
 }
 
 .highlight {
-  color: #9747FF; // deine Wunschfarbe
+  color: $purple-color; // deine Wunschfarbe
   font-weight: bold; // optional
   text-decoration: none;
   cursor: pointer;
