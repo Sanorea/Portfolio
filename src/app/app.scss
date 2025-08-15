@@ -1,24 +1,20 @@
 @import './../styles.scss';
 
-.landing-page {
-    max-width: 1440px;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-}
 
 .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
-.header {
+.root-container {
     width: 100%;
-    max-width: 1440px;
 }
 
-.footer {
-    width: 100%;
-    max-width: 1440px;
+@media (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+    }
+
 }

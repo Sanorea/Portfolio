@@ -1,6 +1,8 @@
 <div class="wrapper-header">
     <div class="header">
         <img src="./img/profile/name.png" alt="">
+
+        <!-- Normales Menu -->
         <div class="menu-container">
             <div class="menu-section-container">
                 <a href="#about-me">About me</a>
@@ -9,6 +11,26 @@
             </div>
             <div class="language-container">
                 <p id="deButton" class="inactiv-language">DE</p>
+                <p id="enButton" class="activ-language">EN</p>
+            </div>
+        </div>
+
+        <!-- Mobile Menu-Icon -->
+
+        <img class="mobile-menu-icon" src="/img/icons/menu-icon.svg" alt="mobile-menu-icon"
+            (click)="toggleMobileMenu()">
+
+
+        <!-- Mobile Menu-Container -->
+        <div class="mobile-menu-container" [class.open]="isMobileMenuOpen">
+            <div class="menu-section-container-mobile">
+                <a href="#about-me" (click)="toggleMobileMenu()">About me</a>
+                <a href="#skills" (click)="toggleMobileMenu()">Skills</a>
+                <a href="#portfolio" (click)="toggleMobileMenu()">Portfolio</a>
+            </div>
+            <div class="language-container-mobile">
+                <p id="deButton" class="inactiv-language">DE</p>
+                <p> / </p>
                 <p id="enButton" class="activ-language">EN</p>
             </div>
         </div>

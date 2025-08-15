@@ -7,22 +7,43 @@ body {
     max-width: 1440px;
 }
 
+:host {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
 .section-full-height {
     height: 100vh;
     display: flex;
     width: 100%;
     max-width: 1440px;
-    margin-inline: 100px;
 }
 
 .section {
-    margin-bottom: 100px;
+    padding-block: 100px;
     display: flex;
     width: 100%;
     max-width: 1440px;
-    margin-inline: 100px;
 }
 
-.wrapper {
+.wrapper-landingpage {
     max-width: 1440px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .wrapper-landingpage {
+        width: 100%;
+    }
+
+    .section {
+        margin-inline: 0px;
+    }
+
+    .section-full-height {
+        margin-inline: 0px;
+    }
+
 }

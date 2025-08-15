@@ -1,5 +1,6 @@
 @import './../../../styles.scss';
 
+
 .img {
     position: relative;
     width: 100%;
@@ -85,10 +86,10 @@
 .i-am-text-name {
     font-weight: 700;
     font-style: Bold;
-    font-size: 90px;
+    /*     font-size: 90px; */
     line-height: 120%;
     letter-spacing: 0%;
-    font-size: clamp(32px, 4vw, 70px); // optional für responsive Schriftgröße
+    font-size: 6vw; // optional für responsive Schriftgröße
     line-height: 120%;
     margin: 0;
     white-space: normal; // ⬅️ Umbruch erlaubt
@@ -100,10 +101,10 @@
 
 .i-am-text-profession {
     font-weight: 400;
-    font-size: 58px;
+    /*     font-size: 58px; */
     line-height: 120%;
     color: $purple-color;
-    font-size: clamp(32px, 4vw, 70px); // optional für responsive Schriftgröße
+    font-size: 4vw; // optional für responsive Schriftgröße
     line-height: 120%;
     margin: 0;
     white-space: normal; // ⬅️ Umbruch erlaubt
@@ -136,8 +137,8 @@
 
 .green-button {
     margin-top: 16px;
-    width: 107;
-    height: 58;
+    width: 165px;
+    height: 58px;
     opacity: 1;
     gap: 10px;
     border-radius: 10px;
@@ -147,7 +148,7 @@
     padding-left: 30px;
     color: white;
     background-color: $green-color;
-    font-size: 32px;
+    font-size: 23px;
     z-index: 4;
     transition: transform 0.3s ease;
     display: inline-block;
@@ -196,4 +197,129 @@
         }
     }
 
+}
+
+@media (max-width: 1225px) {
+
+    .i-am-text-name {
+        font-size: 6vw;
+    }
+
+    .i-am-text-profession {
+        font-size: 4vw;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .i-am-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .start-img {
+        height: 410px;
+        left: unset;
+        top: 0px;
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+        display: flex;
+
+
+    }
+
+    .i-am-textfield {
+        position: relative;
+        margin-top: 0px;
+        left: 0px;
+        bottom: 500px;
+    }
+
+    h3 {
+        font-size: 44px;
+    }
+
+    .i-am-text-rotate {
+        font-size: 32px;
+    }
+
+    .i-am-text-name {
+        font-size: 11vw;
+    }
+
+    .i-am-text-profession {
+        font-size: 28px;
+    }
+
+    .i-am-text-rotate-container {
+        width: 75px;
+    }
+
+    .online-contact-container {
+        width: 100%;
+        justify-content: flex-start;
+
+        p {
+            display: none;
+        }
+    }
+
+    .photo-shadows {
+        width: 390px;
+        position: relative;
+        top: -370px;
+    }
+
+    .hero-bg {
+        height: 167px;
+        top: -460px;
+    }
+
+    .img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+@media (max-width: 420px) {
+    .start-img {
+        height: 280px;
+    }
+
+    .photo-shadows {
+        width: 300px;
+        top: -290px;
+    }
+
+    .hero-bg {
+        top: -360px;
+    }
+
+    .i-am-textfield {
+        bottom: 415px;
+    }
+
+    .i-am-text-name {
+        font-size: 9vw;
+    }
+
+    .i-am-text-profession {
+        font-size: 4vw;
+    }
+
+    .i-am-text-rotate-container {
+        width: 71px;
+    }
+
+    .green-button {
+    margin-top: 16px;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+}
 }

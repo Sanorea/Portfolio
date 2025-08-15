@@ -23,11 +23,22 @@ body {
   background-color: #141D2F;
   color: white;
   margin: 0;
+/*   width: 100%; */
 }
 
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    app-landingpage {
+        width: 100%;
+    }
 }
 
 
