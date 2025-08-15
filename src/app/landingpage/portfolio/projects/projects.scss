@@ -17,7 +17,7 @@
     }
 
     img {
-        width: 400px;
+        width: 350px;
         height: auto;
         border-radius: 10px;
     }
@@ -56,20 +56,19 @@
 
 .live-test-button {
     margin-top: 16px;
-    width: 107;
-    height: 58;
+    width: 152px;
+    height: 58px;
     opacity: 1;
     gap: 10px;
     border-radius: 10px;
-    padding-top: 15px;
-    padding-right: 30px;
-    padding-bottom: 15px;
-    padding-left: 30px;
     color: white;
     background-color: $purple-color;
-    font-size: 32px;
+    font-size: 23px;
+    font-weight: 400;
     z-index: 4;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
 
     &:hover {
@@ -81,21 +80,20 @@
 
 .github-button {
     margin-top: 16px;
-    width: 107;
-    height: 58;
+    width: 152px;
+    height: 58px;
     opacity: 1;
     gap: 10px;
     border-radius: 10px;
     border: 1px solid $green-color;
-    padding-top: 15px;
-    padding-right: 30px;
-    padding-bottom: 15px;
-    padding-left: 30px;
     color: white;
     background-color: $bg-color;
-    font-size: 32px;
+    font-size: 23px;
+    font-weight: 400;
     z-index: 4;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
 
     &:hover {
@@ -104,4 +102,62 @@
         background-color: $green-color;
     }
 
+}
+
+@media (max-width: 1250px) {
+    img {
+        width: 250px;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .project.flipped {
+        flex-direction: column;
+    }
+
+    .project-info {
+        justify-content: center;
+        align-items: center !important;
+    }
+
+    .button-container {
+        gap: 25px;
+    }
+
+
+}
+
+@media (max-width: 420px) {
+    .project.flipped {
+        img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+
+    .project {
+        img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+
+    .live-test-button {
+    width: 112px;
+    height: 40px;
+}
+
+.github-button {
+    width: 112px;
+    height: 40px;
+}
 }

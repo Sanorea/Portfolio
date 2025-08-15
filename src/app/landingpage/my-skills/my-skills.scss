@@ -1,26 +1,22 @@
 @import './../../../styles.scss';
 
-h3 {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 90px;
-    line-height: 120%;
-    letter-spacing: 0%;
-    font-size: clamp(32px, 4vw, 70px); // optional für responsive Schriftgröße
-    line-height: 120%;
-    margin: 0;
-    white-space: normal; // ⬅️ Umbruch erlaubt
-    word-break: break-word; // lange Wörter umbrechen
-    width: auto; // ⬅️ wichtig! Kein 100%
-    max-width: 100%; // optional, falls Container zu schmal wird
-    margin-top: 50px;
-}
 
 .skills-container {
     width: 664px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 40px 88px;
+    gap: 40px 50px;
+    margin-left: 100px;
+    z-index: 10;
+}
+
+.skills-container-mobile {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 40px 50px;
+    margin-left: 100px;
+    width: 664px;
+    z-index: 10;
 }
 
 .skill-container {
@@ -28,7 +24,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    width: 88px;
 
 
     p {
@@ -36,6 +32,19 @@ h3 {
     }
 
 
+}
+
+.img-with-vektor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+}
+
+.purple-vektor {
+    width: 67px;
+    height: 4px;
+    background-color: $purple-color;
 }
 
 .skill-icon {
@@ -113,6 +122,74 @@ h3 {
     &:hover {
         cursor: pointer;
         transform: scale(1.2); // 1.2 = 120 % der Originalgröße
+    }
+
+}
+
+.green-shadow-my-skills {
+    position: absolute;
+    z-index: 0;
+    width: 500px;
+    left: -325px;
+    opacity: 1;
+}
+
+
+
+@media (max-width: 1220px) {
+    .text-container {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .skills-container {
+        display: none;
+    }
+
+    .skills-container-mobile {
+        display: grid;
+        width: 100%;
+        align-items: center;
+        padding-inline: 25px;
+        box-sizing: border-box;
+        padding-top: 32px;
+    }
+
+    .text-container {
+        margin-inline: 0px;
+        width: 100%;
+        align-items: flex-end;
+
+        p {
+            padding-inline: 25px;
+        }
+    }
+
+    .img-with-vektor {
+
+        p {
+            padding-inline: 25px;
+        }
+    }
+
+    .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .green-button {
+        margin-top: 24px;
+        width: 180px;
+        height: 50px;
+        font-size: 18px;
+
+    }
+
+    .fontsize-32px {
+        margin-block: 0px;
+        margin-top: 32px;
     }
 
 }

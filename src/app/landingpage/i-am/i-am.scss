@@ -17,7 +17,7 @@
 }
 
 .photo-shadows {
-    width: 700px;
+
     opacity: 1;
     position: absolute;
     left: 0px;
@@ -283,6 +283,12 @@
         align-items: center;
     }
 
+        .green-button {
+        margin-top: 54px;
+        width: 180px;
+        height: 50px;
+        font-size: 18px;
+    }
 
 }
 
@@ -302,6 +308,7 @@
 
     .i-am-textfield {
         bottom: 415px;
+        margin-right: 25px;
     }
 
     .i-am-text-name {
@@ -309,17 +316,20 @@
     }
 
     .i-am-text-profession {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     .i-am-text-rotate-container {
         width: 71px;
     }
 
-    .green-button {
-    margin-top: 16px;
-    width: 150px;
-    height: 50px;
-    font-size: 18px;
-}
+
+
+    .online-contact-container {
+        top: 90vh;
+    }
+
+    .i-am-text {
+        gap: 8px;
+    }
 }

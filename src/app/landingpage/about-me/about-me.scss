@@ -20,14 +20,15 @@ h3 {
 .about-me-wrapper {
     width: 100%;
     display: flex;
-    gap: 164px;
+    gap: 5vw;
     z-index: 5;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .about-me-text-field {
-    width: 60%;
-    margin-left: 16px;
+    width: 70%;
+    margin-left: 100px;
 }
 
 .bg-shadow {
@@ -88,4 +89,78 @@ h3 {
     width: 100%;
     align-items: center;
     top: 80px;
+}
+
+.bg-shadow-mobile {
+    display: none;
+}
+
+@media (max-width: 1225px) {
+
+    .about-me-text-field {
+        width: 90%;
+    }
+
+    .profile-img {
+        width: 353px;
+        height: 353px;
+    }
+
+    .bg-shadow {
+        left: 160px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .about-me-text-field {
+        margin-inline: 0px;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .profile-img {
+        display: none;
+    }
+
+    .vektor-object-green {
+        display: none;
+        width: 0px;
+    }
+
+    .img-and-vektor-container {
+        width: 0px;
+    }
+
+    .about-me-img {
+        width: 100%;
+        position: absolute;
+        left: 40%;
+    }
+
+    .about-me-wrapper {
+        gap: 0px;
+        margin-inline: 25px;
+        height: unset;
+    }
+
+    .bg-shadow {
+        width: 600px;
+    }
+
+
+
+}
+
+@media (max-width: 420px) {
+        .about-me-img {
+        left: 0%;
+    }
+
+    .informations-about-me {
+        p {
+            font-size: 14px;
+        }
+    }
 }
