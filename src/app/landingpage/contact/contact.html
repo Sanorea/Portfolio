@@ -1,59 +1,58 @@
 <div class="contact-container">
   <div class="h3-container">
     <div class="purple-vektor"></div>
-    <h2>Contact</h2>
+    <h2>{{translations.contactHeadline}}</h2>
     <div class="other-vektor"></div>
   </div>
   <div class="contact-input-container">
     <div class="text-container-contact">
-      <p class="hilighted-text">Got a problem to solve?</p>
-      <p>Encourage people to contact you and describe what role you are interestes in. Show that you will add value to
-        their projects though you work.</p>
-      <p>Need a Frontent developer? <b>Contact me!</b></p>
+      <p class="hilighted-text">{{translations.contactDescriptionHeader}}</p>
+      <p>{{translations.contactDescription}}</p>
+      <p>{{translations.contactNeed}}<b>{{translations.ContactMe}}</b></p>
     </div>
 
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
       <div class="form-group">
         <div class="input-wrapper"
           [ngClass]="{ 'invalid': name.invalid && contactForm.submitted, 'valid': name.valid }">
-          <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required
+          <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{translations.contactName}}" required
             #name="ngModel">
         </div>
         <span class="error-message" *ngIf="name.invalid && contactForm.submitted">
-          Your name is required
+          {{translations.contactNameRequired}}
         </span>
       </div>
 
       <div class="form-group">
         <div class="input-wrapper"
           [ngClass]="{ 'invalid': email.invalid && contactForm.submitted, 'valid': email.valid }">
-          <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email" required
+          <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="{{translations.contactEmail}}" required
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel">
         </div>
         <span class="error-message" *ngIf="email.invalid && contactForm.submitted">
-          Your email is required
+          {{translations.contactEmailRequired}}
         </span>
       </div>
 
       <div class="form-group">
         <div class="input-wrapper"
           [ngClass]="{ 'invalid': message.invalid && contactForm.submitted, 'valid': message.valid }">
-          <textarea [(ngModel)]="contactData.message" name="message" id="message" placeholder="Your message" required
+          <textarea [(ngModel)]="contactData.message" name="message" id="message" placeholder="{{translations.contactMessage}}" required
             minlength="4" #message="ngModel"></textarea>
         </div>
         <span class="error-message" *ngIf="message.invalid && contactForm.submitted">
-          Your message is empty
+          {{translations.contactMessageRequired}}
         </span>
       </div>
 
       <div class="privacy-policy-container">
         <input type="checkbox" name="privacyPolicy" id="checkbox-privacy-policy" [(ngModel)]="contactData.privacyPolicy"
           required>
-        <p>I've read the <a href="privacy-policy" class="highlight">privacy policy</a> and agree</p>
+        <p>{{translations.contactPrivacyPolicyLeft}} <a href="privacy-policy" class="highlight">{{translations.contactPrivacyPolicyMiddle}}</a>{{translations.contactPrivacyPolicyRight}}</p>
       </div>
 
       <div class="button-container">
-        <input type="submit" value="Send message :)" [disabled]="!contactData.privacyPolicy"
+        <input type="submit" value="{{translations.contactSendMessage}}" [disabled]="!contactData.privacyPolicy"
           [class.disabled-btn]="!contactData.privacyPolicy">
       </div>
     </form>

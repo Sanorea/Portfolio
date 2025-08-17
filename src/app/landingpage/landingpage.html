@@ -2,7 +2,7 @@
     <app-header [translations]="currentTranslations"
         (changeLanguage)="toggleChangeLanguage()"></app-header>
 
-    <app-i-am id="i-am" class="section-full-height"></app-i-am>
+    <app-i-am  [translations]="currentTranslations" id="i-am" class="section-full-height"></app-i-am>
 
     <app-about-me [translations]="currentTranslations"  id="about-me" class="section" ></app-about-me>
     <app-my-skills [translations]="currentTranslations" id="skills" class="section"></app-my-skills>
