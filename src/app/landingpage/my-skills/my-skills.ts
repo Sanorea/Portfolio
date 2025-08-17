@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-my-skills',
@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
 
 })
 export class MySkills {
+
+  @Input() translations!: any;
 
   skills = [
     {

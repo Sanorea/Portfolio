@@ -20,6 +20,8 @@ textarea {
         color: white;
     }
 
+
+
 }
 
 
@@ -32,28 +34,63 @@ input[type=submit] {
     cursor: pointer;
 }
 
-h3 {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 90px;
-    line-height: 120%;
-    letter-spacing: 0%;
-    font-size: clamp(32px, 4vw, 70px); // optional für responsive Schriftgröße
-    line-height: 120%;
-    margin: 0;
-    white-space: normal; // ⬅️ Umbruch erlaubt
-    word-break: break-word; // lange Wörter umbrechen
+h2 {
     width: 450px; // ⬅️ wichtig! Kein 100%
     max-width: 100%; // optional, falls Container zu schmal wird
+}
 
+form {
+    width: 100%;
+}
+
+
+.text-container-contact {
+    width: 100%;
 }
 
 .contact-container {
-    margin-inline: 100px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 700px;
+    overflow-y: hidden;
 }
+
+.hilighted-text {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.arrow-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.arrow-icon {
+    border: 2px solid white;
+    padding: 6px;
+    border-radius: 41px;
+    width: 24px;
+    height: 24px;
+    margin-right: 100px;
+    background-image: url('/img/icons/arrow-icon.svg');
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+        cursor: pointer;
+        border: 2px solid $green-color;
+        color: $green-color;
+        background-image: url('/img/icons/arrow-icon-green.svg');
+    }
+}
+
 
 .contact-input-container {
     display: flex;
+    margin-inline: 100px;
+    gap: 50px;
 }
 
 .h3-container {
@@ -75,8 +112,209 @@ h3 {
 }
 
 .highlight {
-  color: $purple-color; // deine Wunschfarbe
-  font-weight: bold; // optional
-  text-decoration: none;
-  cursor: pointer;
+    color: $purple-color; // deine Wunschfarbe
+    font-weight: bold; // optional
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.purple-shadow-contact {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    bottom: -350px;
+    left: -200px;
+}
+
+.button-container {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+
+    input[type=submit]:disabled,
+    .disabled-btn {
+        background-color: grey;
+        cursor: unset;
+        opacity: 0.6;
+    }
+
+}
+
+.form-group {
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.input-wrapper {
+    position: relative;
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid $purple-color;
+        border-radius: 10px;
+        background-color: $bg-color;
+        color: white;
+        outline: none;
+
+        &::placeholder {
+            color: white;
+        }
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    // ✅ grüner Rand + Häkchen
+    &.valid input,
+    &.valid textarea {
+        border-color: $green-color;
+    }
+
+    &.valid::after {
+        content: "✔";
+        color: $bg-color;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: $green-color;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // ❌ roter Rand + Ausrufezeichen
+    &.invalid input,
+    &.invalid textarea {
+        border-color: $red-color;
+    }
+
+    &.invalid::after {
+        content: "!";
+        color: white;
+        background: $red-color;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.error-message {
+    color: $red-color;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
+input[type=submit] {
+    background-color: $purple-color;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:disabled {
+        background-color: grey;
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+/* .input-wrapper input,
+.input-wrapper textarea {
+  border: 2px solid $purple-color;
+} */
+
+// wenn submitted → rot oder grün überschreibt
+.input-wrapper.invalid input,
+.input-wrapper.invalid textarea {
+    border-color: $red-color !important;
+}
+
+.input-wrapper.valid input,
+.input-wrapper.valid textarea {
+    border-color: $green-color !important;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-text-fill-color: white !important; // Textfarbe erzwingen
+    -webkit-box-shadow: 0 0 0px 1000px $bg-color inset !important; // Hintergrund erzwingen
+    background-clip: padding-box !important; // sicherstellen, dass Box-Shadow korrekt angezeigt wird
+}
+
+
+
+
+
+
+.privacy-policy-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $green-color;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:checked {
+            position: relative;
+        }
+
+        &:checked::after {
+            content: "✔";
+            color: $green-color;
+            position: absolute;
+            top: 0;
+            left: 3px;
+            font-size: 10px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-input-container {
+        flex-direction: column;
+        margin-inline: 25px;
+    }
+
+    .contact-container {
+        height: 1200px;
+        overflow-x: hidden;
+    }
+
+    .text-container-contact {
+        width: 80%;
+    }
+
+    .arrow-icon {
+        margin-right: 25px;    
+    }
+
 }

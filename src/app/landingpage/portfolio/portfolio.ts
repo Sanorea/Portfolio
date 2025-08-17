@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Projects } from './projects/projects';
 import { CommonModule } from '@angular/common';
 
@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
 })
 export class Portfolio {
+
+    @Input() translations!: any;
 
   projects = [
     { title: 'Join', skills: 'JavaScript | HTML | CSS | Firebase', description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories', live: 'join', git: 'Join' },

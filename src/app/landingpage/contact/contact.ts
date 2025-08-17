@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
@@ -11,12 +11,15 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class Contact {
 
+    @Input() translations!: any;
+
   http = inject(HttpClient);
 
   contactData = {
     name: '',
     email: '',
     message: '',
+    privacyPolicy: false   // 👈 hinzufügen!
   }
 
 

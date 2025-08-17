@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Landingpage } from './landingpage/landingpage';
 import { LegalNotice } from './legal-notice/legal-notice';
 import { PrivacyPolicy } from './privacy-policy/privacy-policy';
+import { IAm } from './landingpage/i-am/i-am';
 
 
 export const routes: Routes = [

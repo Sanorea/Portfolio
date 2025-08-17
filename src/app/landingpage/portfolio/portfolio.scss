@@ -1,25 +1,10 @@
 @import './../../../styles.scss';
 
-h3 {
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 90px;
-    line-height: 120%;
-    letter-spacing: 0%;
-    font-size: clamp(32px, 4vw, 70px); // optional für responsive Schriftgröße
-    line-height: 120%;
-    margin: 0;
-    white-space: normal; // ⬅️ Umbruch erlaubt
-    word-break: break-word; // lange Wörter umbrechen
-    width: auto; // ⬅️ wichtig! Kein 100%
-    max-width: 100%; // optional, falls Container zu schmal wird
-    margin-top: 50px;
-}
 
 .portfolio-container {
     display: flex;
     flex-direction: column;
-    margin-inline: 100px;
+
     position: relative;
 }
 
@@ -28,16 +13,50 @@ h3 {
     flex-direction: column;
 }
 
-
-
-.head-container-portfolio {
-    overflow-x: hidden;
-    width: 100%;
+.photo-shadows {
+    width: 1250px;
+    height: 1250px;
+    position: absolute;
+    bottom: -1050px;
+    right: -1100px;
 }
 
+.portfolio-title-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    p {
+        margin-inline: 100px;
+    }
+}
+
+.portfolio-title-container {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+
+.left-vektor {
+    background-color: $purple-color;
+    height: 4px;
+    width: 10%;
+}
+
+.right-vektor {
+    background-color: $purple-color;
+    height: 4px;
+    width: 50%;
+}
+
+
+
 @media (max-width: 900px) {
-    .portfolio-container {
-        margin-inline: 25px;
+    .right-vektor {
+        width: 40%;
     }
 
     .green-shadow-my-skills {
@@ -45,18 +64,29 @@ h3 {
         left: -342px;
     }
 
+    .portfolio-title-wrapper {
+        p {
+            margin-inline: 25px;
+            text-align: center;
+            margin-bottom: 0px;
+            margin-top: 50px;
+        }
+    }
+
 
 }
 
 @media (max-width: 650px) {
-    .portfolio-container {
-        margin-inline: 25px;
-    }
+
 
     .green-shadow-my-skills {
         width: 350px;
         left: -280px;
         top: -500px;
+    }
+
+    .right-vektor {
+        width: 20%;
     }
 
 

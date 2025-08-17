@@ -103,21 +103,20 @@
 
 .green-button {
     margin-top: 16px;
-    width: 107;
-    height: 58;
+    width: 165px;
+    height: 58px;
     opacity: 1;
     gap: 10px;
     border-radius: 10px;
-    padding-top: 15px;
-    padding-right: 30px;
-    padding-bottom: 15px;
-    padding-left: 30px;
     color: white;
     background-color: $green-color;
-    font-size: 32px;
+    font-size: 23px;
     z-index: 4;
     transition: transform 0.3s ease;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 
     &:hover {
         cursor: pointer;

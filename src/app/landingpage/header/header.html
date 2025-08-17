@@ -5,33 +5,32 @@
         <!-- Normales Menu -->
         <div class="menu-container">
             <div class="menu-section-container">
-                <a href="#about-me">About me</a>
-                <a href="#skills">Skills</a>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#about-me">{{ translations.headerAboutMe }}</a>
+                <a href="#skills">{{ translations.headerSkills }}</a>
+                <a href="#portfolio">{{ translations.headerPortfolio }}</a>
             </div>
             <div class="language-container">
-                <p id="deButton" class="inactiv-language">DE</p>
-                <p id="enButton" class="activ-language">EN</p>
+                <p id="deButton" class="inactiv-language" (click)="toggleChangeLanguage()">DE</p>
+                <p id="enButton" class="activ-language" (click)="toggleChangeLanguage()">EN</p>
             </div>
         </div>
 
         <!-- Mobile Menu-Icon -->
-
         <img class="mobile-menu-icon" src="/img/icons/menu-icon.svg" alt="mobile-menu-icon"
             (click)="toggleMobileMenu()">
-
 
         <!-- Mobile Menu-Container -->
         <div class="mobile-menu-container" [class.open]="isMobileMenuOpen">
             <div class="menu-section-container-mobile">
-                <a href="#about-me" (click)="toggleMobileMenu()">About me</a>
-                <a href="#skills" (click)="toggleMobileMenu()">Skills</a>
-                <a href="#portfolio" (click)="toggleMobileMenu()">Portfolio</a>
+                <a href="#about-me" (click)="toggleMobileMenu()">{{ translations.mobileAboutMe }}</a>
+                <a href="#skills" (click)="toggleMobileMenu()">{{ translations.mobileSkills }}</a>
+                <a href="#portfolio" (click)="toggleMobileMenu()">{{ translations.mobilePortfolio }}</a>
+                <a href="#contact" (click)="toggleMobileMenu()">{{ translations.mobileContact }}</a>
             </div>
             <div class="language-container-mobile">
-                <p id="deButton" class="inactiv-language">DE</p>
+                <p id="deButton" class="inactiv-language-mobile" (click)="toggleChangeLanguage()">DE</p>
                 <p> / </p>
-                <p id="enButton" class="activ-language">EN</p>
+                <p id="enButton" class="activ-language-mobile" (click)="toggleChangeLanguage()">EN</p>
             </div>
         </div>
     </div>

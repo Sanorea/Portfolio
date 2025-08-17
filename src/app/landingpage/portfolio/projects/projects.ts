@@ -9,11 +9,12 @@ import { Component, Input } from '@angular/core';
   standalone: true,
 })
 export class Projects {
-@Input() title!: string;
-@Input() skills!: string;
-@Input() description!: string;
-@Input() flipped: boolean = false;
-@Input() live!: string;
-@Input() git!: string;
+  @Input() title!: string;
+  @Input() skills!: string;
+  @Input() description!: string;
+  @Input() flipped: boolean = false;
+  @Input() live!: string;
+  @Input() git!: string;
+  @Input() translations!: any;
 
 }

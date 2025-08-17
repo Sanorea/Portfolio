@@ -6,6 +6,7 @@
     gap: 2rem;
     margin-bottom: 3rem;
     margin-top: 80px;
+    margin-inline: 100px;
 
     &.flipped {
         flex-direction: row-reverse;
@@ -116,10 +117,12 @@
 @media (max-width: 900px) {
     .project {
         flex-direction: column;
+        margin-inline: 25px;
     }
 
     .project.flipped {
         flex-direction: column;
+                margin-inline: 25px;
     }
 
     .project-info {
@@ -152,12 +155,12 @@
     }
 
     .live-test-button {
-    width: 112px;
-    height: 40px;
-}
+        width: 112px;
+        height: 40px;
+    }
 
-.github-button {
-    width: 112px;
-    height: 40px;
-}
+    .github-button {
+        width: 112px;
+        height: 40px;
+    }
 }
