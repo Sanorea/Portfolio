@@ -15,8 +15,8 @@
       <div class="form-group">
         <div class="input-wrapper"
           [ngClass]="{ 'invalid': name.invalid && contactForm.submitted, 'valid': name.valid }">
-          <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{translations.contactName}}" required
-            #name="ngModel">
+          <input [(ngModel)]="contactData.name" type="text" id="name" name="name"
+            placeholder="{{translations.contactName}}" required #name="ngModel">
         </div>
         <span class="error-message" *ngIf="name.invalid && contactForm.submitted">
           {{translations.contactNameRequired}}
@@ -26,7 +26,8 @@
       <div class="form-group">
         <div class="input-wrapper"
           [ngClass]="{ 'invalid': email.invalid && contactForm.submitted, 'valid': email.valid }">
-          <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="{{translations.contactEmail}}" required
+          <input [(ngModel)]="contactData.email" type="email" id="email" name="email"
+            placeholder="{{translations.contactEmail}}" required
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel">
         </div>
         <span class="error-message" *ngIf="email.invalid && contactForm.submitted">
@@ -37,8 +38,8 @@
       <div class="form-group">
         <div class="input-wrapper"
           [ngClass]="{ 'invalid': message.invalid && contactForm.submitted, 'valid': message.valid }">
-          <textarea [(ngModel)]="contactData.message" name="message" id="message" placeholder="{{translations.contactMessage}}" required
-            minlength="4" #message="ngModel"></textarea>
+          <textarea [(ngModel)]="contactData.message" name="message" id="message"
+            placeholder="{{translations.contactMessage}}" required minlength="4" #message="ngModel"></textarea>
         </div>
         <span class="error-message" *ngIf="message.invalid && contactForm.submitted">
           {{translations.contactMessageRequired}}
@@ -48,13 +49,21 @@
       <div class="privacy-policy-container">
         <input type="checkbox" name="privacyPolicy" id="checkbox-privacy-policy" [(ngModel)]="contactData.privacyPolicy"
           required>
-        <p>{{translations.contactPrivacyPolicyLeft}} <a href="privacy-policy" class="highlight">{{translations.contactPrivacyPolicyMiddle}}</a>{{translations.contactPrivacyPolicyRight}}</p>
+        <p>{{translations.contactPrivacyPolicyLeft}} <a href="privacy-policy"
+            class="highlight">{{translations.contactPrivacyPolicyMiddle}}</a>{{translations.contactPrivacyPolicyRight}}
+        </p>
       </div>
 
       <div class="button-container">
         <input type="submit" value="{{translations.contactSendMessage}}" [disabled]="!contactData.privacyPolicy"
           [class.disabled-btn]="!contactData.privacyPolicy">
       </div>
+
+      <!-- ✅ Erfolgsmeldung -->
+      <div class="success-message" *ngIf="successMessage">
+        {{ successMessage }}
+      </div>
+
     </form>
 
   </div>

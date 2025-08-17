@@ -24,6 +24,7 @@ export class Contact {
 
 
   mailTest = false;
+  successMessage = ''; 
 
   post = {
     endPoint: 'https://portfolio.isabel-egli.ch/sendMail.php',
@@ -36,23 +37,23 @@ export class Contact {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
-    console.log('submit message');
+    onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             console.log('answer: next');
-            
+            this.successMessage = this.translations?.contactSuccess || 'Nachricht erfolgreich verschickt ✅'; // ✅ Feedback setzen
             ngForm.resetForm();
           },
           error: (error) => {
             console.error(error);
+            this.successMessage = this.translations?.contactError || 'Es gab ein Problem beim Senden ❌';
           },
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-            console.log('answer: last');
+      this.successMessage = this.translations?.contactSuccess || 'Nachricht erfolgreich verschickt ✅';
       ngForm.resetForm();
     }
   }
