@@ -111,13 +111,15 @@ export class Landingpage {
   };
 
 
-  // Getter für aktuelle Übersetzungen
-  get currentTranslations() {
+ get currentTranslations() {
     return this.translationsData[this.currentLang];
   }
 
-  // Funktion zum Wechseln der Sprache
-  toggleChangeLanguage() {
-    this.currentLang = this.currentLang === 'en' ? 'de' : 'en';
+  // Sprache setzen (nur wenn nötig)
+  setLanguage(lang: 'de' | 'en') {
+    if (this.currentLang !== lang) {
+      this.currentLang = lang;
+      console.log('Sprache gewechselt zu:', lang);
+    }
   }
 }

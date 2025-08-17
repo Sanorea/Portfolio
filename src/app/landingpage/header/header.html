@@ -10,8 +10,14 @@
                 <a href="#portfolio">{{ translations.headerPortfolio }}</a>
             </div>
             <div class="language-container">
-                <p id="deButton" class="inactiv-language" (click)="toggleChangeLanguage()">DE</p>
-                <p id="enButton" class="activ-language" (click)="toggleChangeLanguage()">EN</p>
+                <p [ngClass]="activeLang === 'de' ? 'activ-language' : 'inactiv-language'"
+                    [class.disabled]="activeLang === 'de'" (click)="setLanguage('de')">
+                    DE
+                </p>
+                <p [ngClass]="activeLang === 'en' ? 'activ-language' : 'inactiv-language'"
+                    [class.disabled]="activeLang === 'en'" (click)="setLanguage('en')">
+                    EN
+                </p>
             </div>
         </div>
 
@@ -28,9 +34,15 @@
                 <a href="#contact" (click)="toggleMobileMenu()">{{ translations.mobileContact }}</a>
             </div>
             <div class="language-container-mobile">
-                <p id="deButton" class="inactiv-language-mobile" (click)="toggleChangeLanguage()">DE</p>
+                <p [ngClass]="activeLang === 'de' ? 'activ-language-mobile' : 'inactiv-language-mobile'"
+                    [class.disabled]="activeLang === 'de'" (click)="setLanguage('de')">
+                    DE
+                </p>
                 <p> / </p>
-                <p id="enButton" class="activ-language-mobile" (click)="toggleChangeLanguage()">EN</p>
+                <p [ngClass]="activeLang === 'en' ? 'activ-language-mobile' : 'inactiv-language-mobile'"
+                    [class.disabled]="activeLang === 'en'" (click)="setLanguage('en')">
+                    EN
+                </p>
             </div>
         </div>
     </div>

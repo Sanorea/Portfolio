@@ -9,18 +9,20 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.scss']
 })
 export class Header {
-  @Input() translations!: any;
 
-  @Output() changeLanguage = new EventEmitter<void>();
+  @Input() translations!: any;
+  @Input() activeLang: 'de' | 'en' = 'en';
+  @Output() changeLanguage = new EventEmitter<'de' | 'en'>();
 
   isMobileMenuOpen = false;
 
-  toggleMobileMenu() {
-    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  setLanguage(lang: 'de' | 'en') {
+    if (this.activeLang !== lang) {
+      this.changeLanguage.emit(lang);
+    }
   }
 
-  // Emit event to parent
-  toggleChangeLanguage() {
-    this.changeLanguage.emit();
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 }

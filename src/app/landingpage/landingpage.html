@@ -1,13 +1,11 @@
 <div class="wrapper-landingpage">
-    <app-header [translations]="currentTranslations"
-        (changeLanguage)="toggleChangeLanguage()"></app-header>
+    <app-header [translations]="currentTranslations" [activeLang]="currentLang" (changeLanguage)="setLanguage($event)">
+    </app-header>
 
-    <app-i-am  [translations]="currentTranslations" id="i-am" class="section-full-height"></app-i-am>
-
-    <app-about-me [translations]="currentTranslations"  id="about-me" class="section" ></app-about-me>
+    <app-i-am [translations]="currentTranslations" id="i-am" class="section-full-height"></app-i-am>
+    <app-about-me [translations]="currentTranslations" id="about-me" class="section"></app-about-me>
     <app-my-skills [translations]="currentTranslations" id="skills" class="section"></app-my-skills>
     <app-portfolio [translations]="currentTranslations" id="portfolio" class="section"></app-portfolio>
-    <!--     <app-testimonials class="section"></app-testimonials> -->
     <app-contact [translations]="currentTranslations" id="contact" class="section-contactform"></app-contact>
     <app-footer [translations]="currentTranslations"></app-footer>
 </div>
