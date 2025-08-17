@@ -7,13 +7,13 @@ h3 {
     font-size: 90px;
     line-height: 120%;
     letter-spacing: 0%;
-    font-size: clamp(32px, 4vw, 70px); // optional für responsive Schriftgröße
+    font-size: clamp(32px, 4vw, 70px); 
     line-height: 120%;
     margin: 0;
-    white-space: normal; // ⬅️ Umbruch erlaubt
-    word-break: break-word; // lange Wörter umbrechen
-    width: auto; // ⬅️ wichtig! Kein 100%
-    max-width: 100%; // optional, falls Container zu schmal wird
+    white-space: normal; 
+    word-break: break-word; 
+    width: auto; 
+    max-width: 100%; 
     margin-top: 50px;
 }
 
@@ -60,8 +60,6 @@ h3 {
         height: 48px;
         width: 48px;
     }
-
-
 }
 
 .about-me-img {
@@ -96,7 +94,6 @@ h3 {
 }
 
 @media (max-width: 1225px) {
-
     .about-me-text-field {
         width: 90%;
     }
@@ -109,11 +106,9 @@ h3 {
     .bg-shadow {
         left: 160px;
     }
-
 }
 
 @media (max-width: 900px) {
-
     .about-me-text-field {
         margin-inline: 0px;
         width: 100%;
@@ -148,9 +143,6 @@ h3 {
     .bg-shadow {
         width: 600px;
     }
-
-
-
 }
 
 @media (max-width: 420px) {

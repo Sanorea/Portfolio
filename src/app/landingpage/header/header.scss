@@ -40,7 +40,6 @@
   align-items: center;
 
   a {
-    /* Hier deine Styles für alle <a> Links im Container */
     color: white;
     text-decoration: none;
     font-size: 23px;
@@ -100,7 +99,7 @@
 
 .mobile-menu-container {
   position: fixed;
-  top: 110px; // unterhalb des Headers
+  top: 110px;
   right: 0;
   width: 100%;
   height: calc(100% - 110px);
@@ -110,8 +109,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  /* Animation */
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 
@@ -127,7 +124,6 @@
   }
 }
 
-/* Sichtbar-Variante */
 .mobile-menu-container.open {
   transform: translateX(0);
 }
@@ -146,7 +142,7 @@
 }
 
 .mobile-menu-icon {
-  display: none; // Standard: im Desktop nicht sichtbar
+  display: none;
 }
 
 @media (max-width: 1225px) {
@@ -172,20 +168,17 @@
 
 @media (max-width: 768px) {
   .menu-container {
-    display: none; // Normales Menü ausblenden
+    display: none;
   }
 
   .mobile-menu-icon {
-    display: block; // Icon anzeigen
+    display: block;
     width: 32px;
     height: 32px;
     cursor: pointer;
-
   }
 
   .header {
-
-    /*     padding-inline: 25px; */
     padding-inline: 25px;
     margin-inline: 0px;
 

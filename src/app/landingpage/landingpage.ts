@@ -16,9 +16,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './landingpage.scss'
 })
 export class Landingpage {
-  currentLang: 'en' | 'de' = 'en';  // aktuelle Sprache
-
-  // Texte für beide Sprachen
+  currentLang: 'en' | 'de' = 'en'; 
 
   translationsData = {
     en: {
@@ -115,7 +113,6 @@ export class Landingpage {
     return this.translationsData[this.currentLang];
   }
 
-  // Sprache setzen (nur wenn nötig)
   setLanguage(lang: 'de' | 'en') {
     if (this.currentLang !== lang) {
       this.currentLang = lang;

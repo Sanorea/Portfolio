@@ -19,9 +19,6 @@ textarea {
     &::placeholder {
         color: white;
     }
-
-
-
 }
 
 
@@ -35,8 +32,8 @@ input[type=submit] {
 }
 
 h2 {
-    width: 450px; // ⬅️ wichtig! Kein 100%
-    max-width: 100%; // optional, falls Container zu schmal wird
+    width: 450px;
+    max-width: 100%; 
 }
 
 form {
@@ -112,8 +109,8 @@ form {
 }
 
 .highlight {
-    color: $purple-color; // deine Wunschfarbe
-    font-weight: bold; // optional
+    color: $purple-color;
+    font-weight: bold;
     text-decoration: none;
     cursor: pointer;
 }
@@ -137,7 +134,6 @@ form {
         cursor: unset;
         opacity: 0.6;
     }
-
 }
 
 .form-group {
@@ -167,7 +163,6 @@ form {
         height: 150px;
     }
 
-    // ✅ grüner Rand + Häkchen
     &.valid input,
     &.valid textarea {
         border-color: $green-color;
@@ -190,7 +185,6 @@ form {
         justify-content: center;
     }
 
-    // ❌ roter Rand + Ausrufezeichen
     &.invalid input,
     &.invalid textarea {
         border-color: $red-color;
@@ -236,12 +230,6 @@ input[type=submit] {
     }
 }
 
-/* .input-wrapper input,
-.input-wrapper textarea {
-  border: 2px solid $purple-color;
-} */
-
-// wenn submitted → rot oder grün überschreibt
 .input-wrapper.invalid input,
 .input-wrapper.invalid textarea {
     border-color: $red-color !important;
@@ -254,15 +242,9 @@ input[type=submit] {
 
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-    -webkit-text-fill-color: white !important; // Textfarbe erzwingen
-    -webkit-box-shadow: 0 0 0px 1000px $bg-color inset !important; // Hintergrund erzwingen
-    background-clip: padding-box !important; // sicherstellen, dass Box-Shadow korrekt angezeigt wird
+    -webkit-text-fill-color: white !important; 
+    -webkit-box-shadow: 0 0 0px 1000px $bg-color inset !important; 
 }
-
-
-
-
-
 
 .privacy-policy-container {
     display: flex;
@@ -299,11 +281,11 @@ textarea:-webkit-autofill {
 }
 
 .success-message {
-  margin-top: 12px;
-  font-size: 14px;
-  font-weight: bold;
-  color: $green-color; // Erfolgsfarbe
-  text-align: center;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: $green-color;
+    text-align: center;
 }
 
 
@@ -323,7 +305,6 @@ textarea:-webkit-autofill {
     }
 
     .arrow-icon {
-        margin-right: 25px;    
+        margin-right: 25px;
     }
-
 }

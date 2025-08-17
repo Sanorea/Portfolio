@@ -26,12 +26,9 @@
     justify-content: center;
     width: 88px;
 
-
     p {
         text-align: center;
     }
-
-
 }
 
 .img-with-vektor {
@@ -90,7 +87,6 @@
 
 .skill-container.highlight:hover {
     color: white;
-    /* beliebige Hover-Farbe */
     transition: color 0.1s ease;
 }
 
@@ -120,9 +116,8 @@
 
     &:hover {
         cursor: pointer;
-        transform: scale(1.2); // 1.2 = 120 % der Originalgröße
+        transform: scale(1.2);
     }
-
 }
 
 .green-shadow-my-skills {
@@ -132,8 +127,6 @@
     left: -325px;
     opacity: 1;
 }
-
-
 
 @media (max-width: 1220px) {
     .text-container {

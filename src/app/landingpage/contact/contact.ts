@@ -7,7 +7,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   selector: 'app-contact',
   imports: [FormsModule, CommonModule],
   templateUrl: './contact.html',
-  styleUrls: ['./contact.scss'] // styleUrl → styleUrls korrigiert
+  styleUrls: ['./contact.scss']
 })
 export class Contact {
 
@@ -19,7 +19,7 @@ export class Contact {
     name: '',
     email: '',
     message: '',
-    privacyPolicy: false   // 👈 hinzufügen!
+    privacyPolicy: false  
   }
 
 
@@ -43,7 +43,7 @@ export class Contact {
         .subscribe({
           next: (response) => {
             console.log('answer: next');
-            this.successMessage = this.translations?.contactSuccess || 'Nachricht erfolgreich verschickt ✅'; // ✅ Feedback setzen
+            this.successMessage = this.translations?.contactSuccess || 'Nachricht erfolgreich verschickt ✅'; 
             ngForm.resetForm();
           },
           error: (error) => {
