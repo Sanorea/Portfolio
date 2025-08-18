@@ -1,16 +1,20 @@
 <div class="portfolio-container">
-    <div class="portfolio-title-wrapper">
-        <div class="portfolio-title-container">
-            <div class="left-vektor"></div>
-            <h2>Portfolio</h2>
-            <div class="right-vektor"></div>
+    <div class="max-width-container">
+        <div class="portfolio-title-wrapper">
+            <div class="portfolio-title-container">
+                <div class="left-vektor"></div>
+                <h2>Portfolio</h2>
+                <div class="right-vektor"></div>
+            </div>
+            <p>{{translations.portfolioText}}</p>
         </div>
-        <p>{{translations.portfolioText}}</p>
-    </div>
-    <div class="project-container">
-        <app-projects *ngFor="let project of projects; let i = index" [title]="project.title" [skills]="project.skills"
-            [description]="project.description" [live]="project.live" [git]="project.git" [flipped]="i % 2 !== 0">
-        </app-projects>
+        <div class="project-container">
+            <app-projects *ngFor="let project of projects; let i = index" [title]="project.title"
+                [skills]="project.skills" [description]="project.description" [live]="project.live" [git]="project.git"
+                [flipped]="i % 2 !== 0">
+            </app-projects>
+        </div>
+        
     </div>
     <img class="photo-shadows" src="/img/bg/54. Green shadow 3 (skills and portfolio section).png" alt="">
 </div>

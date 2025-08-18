@@ -59,7 +59,7 @@ export class Landingpage {
       contactPrivacyPolicyMiddle: 'privacy policy ',
       contactPrivacyPolicyRight: 'and agree',
       contactSendMessage: 'Send message :)',
-
+      contactMessageSuccessfull: 'Thank you for your message.',
 
     },
 
@@ -103,7 +103,7 @@ export class Landingpage {
       contactPrivacyPolicyMiddle: 'Datenschutzerklärung ',
       contactPrivacyPolicyRight: 'gelesen und stimme der Verarbeitung meiner Daten zu',
       contactSendMessage: 'Mitteilung senden :)',
-
+      contactMessageSuccessfull: 'Vielen Dank für Ihre Nachricht.',
 
     },
   };

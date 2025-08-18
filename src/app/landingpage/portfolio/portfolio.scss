@@ -4,8 +4,17 @@
 .portfolio-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+
+.max-width-container {
+    display: flex;
+    flex-direction: column;
 
     position: relative;
+    max-width: 1440px;
 }
 
 .project-container {
@@ -18,7 +27,7 @@
     height: 1250px;
     position: absolute;
     bottom: -1050px;
-    right: -1100px;
+    right: -1050px;
 }
 
 .portfolio-title-wrapper {

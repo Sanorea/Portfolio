@@ -20,10 +20,20 @@ h3 {
 .about-me-wrapper {
     width: 100%;
     display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.max-width-container {
+    width: 100%;
+    display: flex;
     gap: 5vw;
     z-index: 5;
-    height: 100vh;
-    overflow-x: hidden;
+    height:auto;
+    max-width: 1440px;
+    flex-direction: row;
+
 }
 
 .about-me-text-field {
@@ -35,8 +45,8 @@ h3 {
     width: 774px;
     opacity: 1;
     position: absolute;
-    left: 431px;
-    top: -40px;
+    right: -450px;
+    top: 0px;
     z-index: 0;
 }
 
@@ -69,7 +79,7 @@ h3 {
     height: 700px;
     width: 100%;
     position: relative;
-    overflow: hidden;
+/*     overflow: hidden; */
 }
 
 .vektor-object-green {
@@ -93,6 +103,11 @@ h3 {
     display: none;
 }
 
+
+
+
+
+
 @media (max-width: 1225px) {
     .about-me-text-field {
         width: 90%;
@@ -103,9 +118,6 @@ h3 {
         height: 353px;
     }
 
-    .bg-shadow {
-        left: 160px;
-    }
 }
 
 @media (max-width: 900px) {
@@ -134,7 +146,7 @@ h3 {
         left: 40%;
     }
 
-    .about-me-wrapper {
+    .max-width-container {
         gap: 0px;
         margin-inline: 25px;
         height: unset;

@@ -43,7 +43,7 @@ export class Contact {
         .subscribe({
           next: (response) => {
             console.log('answer: next');
-            this.successMessage = this.translations?.contactSuccess || 'Nachricht erfolgreich verschickt ✅'; 
+            this.successMessage = this.translations?.contactSuccess || this.translations.contactMessageSuccessfull; 
             ngForm.resetForm();
           },
           error: (error) => {
@@ -53,7 +53,7 @@ export class Contact {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      this.successMessage = this.translations?.contactSuccess || 'Nachricht erfolgreich verschickt ✅';
+      this.successMessage = this.translations?.contactSuccess || this.translations.contactMessageSuccessfull;
       ngForm.resetForm();
     }
   }

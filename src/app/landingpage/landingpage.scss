@@ -18,7 +18,7 @@ body {
     height: 100vh;
     display: flex;
     width: 100%;
-    max-width: 1440px;
+
 }
 
 .section {
@@ -26,7 +26,8 @@ body {
     padding-bottom: 50px;
     display: flex;
     width: 100%;
-    max-width: 1440px;
+    justify-content: center;
+
 }
 
 .section-contactform {
@@ -34,15 +35,27 @@ body {
     padding-bottom: 0px;
     display: flex;
     width: 100%;
-    max-width: 1440px;
+
 }
 
 .wrapper-landingpage {
-    max-width: 1440px;
     width: 100%;
     overflow: hidden;
-    position: relative;  
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.bg-shadow {
+    width: 774px;
+    opacity: 1;
+    position: absolute;
+    left: 431px;
+    top: -40px;
+    z-index: 0;
+}
+
 
 @media (max-width: 768px) {
     .wrapper-landingpage {
