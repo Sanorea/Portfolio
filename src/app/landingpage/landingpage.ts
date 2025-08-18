@@ -116,7 +116,6 @@ export class Landingpage {
   setLanguage(lang: 'de' | 'en') {
     if (this.currentLang !== lang) {
       this.currentLang = lang;
-      console.log('Sprache gewechselt zu:', lang);
     }
   }
 }

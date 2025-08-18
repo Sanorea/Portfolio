@@ -42,7 +42,6 @@ export class Contact {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            console.log('answer: next');
             this.successMessage = this.translations?.contactSuccess || this.translations.contactMessageSuccessfull; 
             ngForm.resetForm();
           },
