@@ -12,29 +12,32 @@ import { CommonModule } from '@angular/common';
 export class Portfolio {
   @Input() translations!: any;
 
-  get projects() {
-    return [
+  projects: any[] = [];
+
+  ngOnInit() {
+    this.projects = [
       { 
-        title: 'Join', 
-        skills: 'JavaScript | HTML | CSS | Firebase', 
-        description: this.translations?.portfolioJoin, 
-        live: 'join', 
-        git: 'Join' 
+        title: 'Join',
+        skills: 'JavaScript | HTML | CSS | Firebase',
+        description: this.translations?.portfolioJoin,
+        live: 'join',
+        git: 'Join'
       },
       { 
-        title: 'El Pollo Loco', 
-        skills: 'JavaScript | HTML | CSS', 
-        description: this.translations?.portfolioElPolloLoco, 
-        live: 'el-pollo-loco', 
-        git: 'El-pollo-loco' 
+        title: 'El Pollo Loco',
+        skills: 'JavaScript | HTML | CSS',
+        description: this.translations?.portfolioElPolloLoco,
+        live: 'el-pollo-loco',
+        git: 'El-pollo-loco'
       },
       { 
-        title: 'Pokedex', 
-        skills: 'JavaScript | HTML | CSS | Api', 
-        description: this.translations?.portfolioPokedex, 
-        live: 'pokedex', 
-        git: 'Pokedex' 
+        title: 'Pokedex',
+        skills: 'JavaScript | HTML | CSS | Api',
+        description: this.translations?.portfolioPokedex,
+        live: 'pokedex',
+        git: 'Pokedex'
       },
     ];
   }
 }
+
