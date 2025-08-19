@@ -2,7 +2,7 @@
   <div class="max-width-container">
     <div class="footer-left">
       <img src="./img/profile/name.png" alt="">
-    <a [routerLink]="'/legal-notice'" class="legal-notice-link-desktop" >{{ translations.legalNoticeHeader }}</a>
+      <a [routerLink]="'/legal-notice'" class="legal-notice-link-desktop">{{ translations.legalNoticeHeader }}</a>
     </div>
     <div class="copyright-text">
       © Isabel Egli 2025
@@ -18,7 +18,8 @@
         <img class="sozial-media-icon" src="./img/icons/linkedin-icon.png" alt="LinkedIn">
       </a>
     </div>
-    <a [routerLink]="'/legal-notice'" class="legal-notice-link-mobile" >{{ translations.legalNoticeHeader }}</a>
+    <a [routerLink]="['/legal-notice']" class="legal-notice-link-mobile">{{ translations.legalNoticeHeader }}</a>
+
 
   </div>
 

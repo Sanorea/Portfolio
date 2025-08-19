@@ -1,4 +1,4 @@
-@import './../../../styles.scss';
+ @import './../../../styles.scss';
 
 :host {
     width: 100%;
@@ -154,6 +154,7 @@ form {
 .form-group {
     margin-bottom: 16px;
     position: relative;
+    
 }
 
 .input-wrapper {
@@ -229,7 +230,13 @@ form {
     font-size: 12px;
     margin-top: 4px;
     display: block;
+    min-height: 18px;
+    visibility: hidden;
 }
+
+  .input-wrapper.invalid + .error-message {
+    visibility: visible;
+  }
 
 input[type=submit] {
     background-color: $purple-color;
@@ -297,12 +304,17 @@ textarea:-webkit-autofill {
 }
 
 .success-message {
-    margin-top: 12px;
-    font-size: 14px;
-    font-weight: bold;
-    color: $green-color;
-    text-align: center;
+  color: $green-color;
+  font-size: 14px;
+  margin-top: 8px;
+  min-height: 20px;
+  visibility: hidden;
+
+  &.visible {
+    visibility: visible;
+  }
 }
+
 
 
 @media (max-width: 900px) {
@@ -324,4 +336,4 @@ textarea:-webkit-autofill {
     .arrow-icon {
         margin-right: 25px;
     }
-}
+} 
