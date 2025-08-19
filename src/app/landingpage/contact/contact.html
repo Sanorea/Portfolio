@@ -58,7 +58,7 @@
         <div class="privacy-policy-container">
           <input type="checkbox" name="privacyPolicy" id="checkbox-privacy-policy"
             [(ngModel)]="contactData.privacyPolicy" required>
-          <p>{{translations.contactPrivacyPolicyLeft}} <a href="privacy-policy"
+          <p>{{translations.contactPrivacyPolicyLeft}} <a [routerLink]="'/privacy-policy'"
               class="highlight">{{translations.contactPrivacyPolicyMiddle}}</a>{{translations.contactPrivacyPolicyRight}}
           </p>
         </div>
