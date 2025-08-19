@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Translations } from '../translations';
 
 @Component({
   selector: 'app-legal-notice',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './legal-notice.scss'
 })
 export class LegalNotice {
-
+constructor(public translationService: Translations) {}
 }

@@ -5,23 +5,38 @@ body {
     display: flex;
     justify-content: center;
     max-width: 1440px;
-
+    width: 100%;
 }
 
 :host {
     display: flex;
     width: 100%;
     justify-content: center;
-    max-width: 1440px;
+}
+
+h2 {
+    font-size: clamp(32px, 4vw, 40px);
+}
+
+.lang-container {
+    width: 100%;
 }
 
 .privacy-policy-container {
-    margin-top: 100px;
-    display: flex;
+    margin-top: 120px;
     width: 100%;
     justify-content: space-between;
     margin-inline: 100px;
+    margin-bottom: 50px;
 }
+
+.max-width-container {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+}
+
 
 #jmdcontent h1,
 #jmdcontent h2,
@@ -106,6 +121,7 @@ body {
 }
 
 @media (max-width: 1600px) {
+
     #jmdcontent table,
     #jmdcontent thead,
     #jmdcontent tbody,
@@ -173,7 +189,9 @@ body {
 
 @media (max-width: 650px) {
     .privacy-policy-container {
-        margin-inline: 25px;
+        padding-inline: 25px;
+        box-sizing: border-box;
+
     }
 
     h2 {

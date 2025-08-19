@@ -9,4 +9,6 @@ export const routes: Routes = [
     { path: '', component: Landingpage },
     { path: 'legal-notice', component: LegalNotice },
     { path: 'privacy-policy', component: PrivacyPolicy },
+
+    
 ];

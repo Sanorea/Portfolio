@@ -11,7 +11,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class Contact {
 
-    @Input() translations!: any;
+  @Input() translations!: any;
 
   http = inject(HttpClient);
 
@@ -19,12 +19,12 @@ export class Contact {
     name: '',
     email: '',
     message: '',
-    privacyPolicy: false  
+    privacyPolicy: false
   }
 
 
   mailTest = false;
-  successMessage = ''; 
+  successMessage = '';
 
   post = {
     endPoint: 'https://portfolio.isabel-egli.ch/sendMail.php',
@@ -37,13 +37,19 @@ export class Contact {
     },
   };
 
-    onSubmit(ngForm: NgForm) {
+  onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            this.successMessage = this.translations?.contactSuccess || this.translations.contactMessageSuccessfull; 
+            this.successMessage = this.translations?.contactSuccess || this.translations.contactMessageSuccessfull;
+
+            setTimeout(() => {
+              this.successMessage = '';
+
+            }, 3000);
             ngForm.resetForm();
+
           },
           error: (error) => {
             console.error(error);

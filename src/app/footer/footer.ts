@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class Footer {
   @Input() translations!: any;
+  @Input() activeLang: 'de' | 'en' = 'en';
 
 }

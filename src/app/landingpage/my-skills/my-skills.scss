@@ -1,5 +1,18 @@
 @import './../../../styles.scss';
 
+.skills-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.max-width-container {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    position: relative;
+}
+
 
 .skills-container {
     width: 664px;
@@ -8,6 +21,8 @@
     gap: 40px 50px;
     margin-left: 100px;
     z-index: 10;
+    justify-items: center;
+    align-items: center;
 }
 
 .skills-container-mobile {
@@ -17,6 +32,8 @@
     margin-left: 100px;
     width: 664px;
     z-index: 10;
+    justify-items: center;
+    align-items: center;
 }
 
 .skill-container {
@@ -125,6 +142,7 @@
     z-index: 0;
     width: 500px;
     left: -325px;
+    bottom: -400px;
     opacity: 1;
 }
 
@@ -146,6 +164,9 @@
         padding-inline: 25px;
         box-sizing: border-box;
         padding-top: 32px;
+        justify-items: center;
+        align-items: center;
+
     }
 
     .text-container {
