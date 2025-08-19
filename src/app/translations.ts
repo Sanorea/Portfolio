@@ -120,7 +120,7 @@ export class Translations {
   }
 
   async loadPrivacyPolicy(): Promise<string> {
-    const file = `/privacy-policy/${this.currentLang}.html`;
+    const file = `/privacies/${this.currentLang}.html`;
     return firstValueFrom(this.http.get(file, { responseType: 'text' }));
   }
 }

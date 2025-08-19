@@ -21,10 +21,16 @@
   width: 100%;
   max-width: 1440px;
 
-  img {
-    height: 45px;
-    margin-left: 100px;
-  }
+
+}
+
+.name-img {
+  height: 45px;
+  width: 100px;
+  margin-left: 100px;
+  background-image: url('/img/profile/name.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .menu-container {
