@@ -2,35 +2,33 @@
 
 body {
     margin: 0px;
-    display: flex;
+
     justify-content: center;
-    height: 100vh;
+
     width: 100%;
 }
 
 :host {
-    display: flex;
+    display: block;
     width: 100%;
-    justify-content: center;
-    height: 70vh;
+    margin-top: 150px;
+    flex: 1;
+
 
 }
 
 .max-width-container {
     max-width: 1440px;
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem;
     width: 100%;
-    height: 100vh;
+
 }
 
 .impressum-container {
-    margin-block: 150px;
     display: flex;
-    width: 100%;
     justify-content: space-between;
-    margin-inline: 100px;
-
+    margin: 2rem 100px;
 }
 
 .arrow-back {
@@ -55,11 +53,9 @@ body {
 }
 
 @media (min-height: 900px) {
-:host {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    height: 80vh;
-
-}
+    :host {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
 }

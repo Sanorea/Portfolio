@@ -315,8 +315,6 @@ textarea:-webkit-autofill {
   }
 }
 
-
-
 @media (max-width: 900px) {
     .contact-input-container {
         flex-direction: column;
@@ -326,7 +324,6 @@ textarea:-webkit-autofill {
     .contact-container {
         height: auto;
         padding-bottom: 100px;
-/*         overflow-x: hidden; */
     }
 
     .text-container-contact {
